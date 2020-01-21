@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <div id="app">
+
+       <h1 class="display-2 text-info text-center p-3 my:5 border-5">{{ title }}</h1> 
+       <img id="pshow"v-bind:src="currentI" alt="perros[currentI].name">
+       <input type="text" placeholder="Add new Doggie" v-model="perrito" @keyup.enter="addItem">
+       <button @click="addItem" class="btn btn-success">Agregar</button> 
+       <button @click="change" class="btn btn-success">Next</button>
+       <button @click="onSeen" class="btn btn-warning">Cats </button>
+       <button @click="printM" class="btn btn-info">Hide Message </button>
+       <span v-if="see===true">
+        <h2 id="mensaje">Hola</h2>
+       </span>
+       <h3 v-show="seen">
+        {{message1}}
+       </h3>
+      </div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="../scripts/scripts.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</html>
